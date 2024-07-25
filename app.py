@@ -80,7 +80,7 @@ if 'messages' not in st.session_state:
     st.session_state.messages = [{'role': 'study assistant', "content": 'Hello there! Upload a PDF and ask me anything about its content.'}]
 
 with st.sidebar:
-    st.title("Submition :")
+    st.title("Submission :")
     uploaded_file = st.file_uploader("Upload your PDF Files and Click on the Submit & Process Button")
     if st.button("Submit & Process"):
         with st.spinner("Processing..."):
