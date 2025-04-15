@@ -35,7 +35,7 @@ http://localhost:8501
 ```bash
 # Clone repo
 git clone https://github.com/Alayasokan/Mini-Project.git
-cd Mini-Project/RAG/
+cd Mini-Project/
 
 # Setup environment
 python -m venv venv
