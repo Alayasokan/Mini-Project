@@ -1,13 +1,56 @@
----
-title: StudyWithRAG
-emoji: 🚀
-colorFrom: red
-colorTo: blue
-sdk: streamlit
-sdk_version: 1.36.0
-app_file: app.py
-pinned: false
-license: apache-2.0
----
+# 📚 RAG-Powered PDF Q&A System
 
-Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
+![RAG App Demo](./images/ss.png) <!-- Replace with actual screenshot/GIF -->
+
+A Retrieval-Augmented Generation (RAG) application for querying PDF documents using Streamlit and Hugging Face LLMs.
+
+## 🌟 Features
+- **PDF Document Processing**
+- **Semantic Search**
+- **LLM-Powered Answers**
+- **Conversational Interface**
+- **Persistent Storage**
+
+## 🛠️ Tech Stack
+
+**Frontend**  
+- Streamlit
+
+**Backend**  
+- Huggingface API
+- Huggingface Embeddings (BAAI/bge-small-en-v1.5 t)
+- LLM (google/gemma-1.1-7b-it via HuggingfaceAPI)
+- LlamaIndex  
+
+**Deployment**  
+```bash
+http://localhost:8501
+```
+
+
+
+
+## 🚀 Quick Start
+
+```bash
+# Clone repo
+git clone https://github.com/Alayasokan/Mini-Project.git
+cd Mini-Project/RAG/
+
+# Setup environment
+python -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Add your Hugging Face token
+echo "HF_TOKEN=your_token_here" > .env
+
+# Or Terminal
+Generate a Hugging Face API token, then paste it in the terminal after login. Ensure it has write access.
+
+# Run the app
+streamlit run app.py
+
+```

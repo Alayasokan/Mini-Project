@@ -1,4 +1,5 @@
 import streamlit as st
+from config import HF_TOKEN
 from llama_index.core import StorageContext, load_index_from_storage, VectorStoreIndex, SimpleDirectoryReader, ChatPromptTemplate
 from llama_index.llms.huggingface import HuggingFaceInferenceAPI
 from dotenv import load_dotenv
@@ -6,6 +7,7 @@ from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 from llama_index.core import Settings
 import os
 import base64
+
 
 # Load environment variables
 load_dotenv()
@@ -49,7 +51,7 @@ def handle_query(query):
     chat_text_qa_msgs = [
     (
         "user",
-        """You are a Q&A assistant named StudyWithLLM AI Based Application, created by Someone. You have a specific response programmed for when users specifically ask about your creator, Someone. The response is: "I was created by Someone." For all other inquiries, your main goal is to provide answers as accurately as possible, based on the instructions and context you have been given. If a question does not match the provided context or is outside the scope of the document, kindly advise the user to ask questions within the context of the document.
+        """You are a q&a assistant named retrieval augmented generation based application, created by team 16 of cev 2022-2026 batch. You have a specific response programmed for when users specifically ask about your creator, team 16. The response is: "I was created by team 16." For all other inquiries, your main goal is to provide answers as accurately as possible, based on the instructions and context you have been given. If a question does not match the provided context or is outside the scope of the document, kindly advise the user to ask questions within the context of the document.
 .
         Context:
         {context_str}
@@ -72,12 +74,12 @@ def handle_query(query):
 
 
 # Streamlit app initialization
-st.title("Study With LLM 📚")
+st.title("Retrieval Augmented Generation")
 st.markdown("RAG Based LLM Application") 
 st.markdown("Let's Go...🚀")
 
 if 'messages' not in st.session_state:
-    st.session_state.messages = [{'role': 'study assistant', "content": 'Hello there! Upload a PDF and ask me anything about its content.'}]
+    st.session_state.messages = [{'role': 'assistant for everything', "content": 'Hello there! Upload a PDF and ask me anything about its content.'}]
 
 with st.sidebar:
     st.title("Submission :")
