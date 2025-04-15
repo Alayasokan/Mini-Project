@@ -45,7 +45,7 @@ source venv/bin/activate  # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 
 # Add your Hugging Face token
-echo "HF_TOKEN=your_token_here" > .env
+ paste your API Token in config.py "HF_TOKEN=your_token_here"
 
 # Or Terminal
 Generate a Hugging Face API token, then paste it in the terminal after login. Ensure it has write access.
